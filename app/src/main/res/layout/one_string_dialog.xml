@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent" android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingStart="24dp" android:paddingEnd="24dp"
+        android:paddingTop="16dp" android:paddingBottom="16dp"
+>
+    <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_white_color"
+            tools:text="Some description here"
+    />
+    <EditText
+            android:layout_marginTop="8dp"
+            android:id="@+id/editText"
+            android:hint="@string/enter_string_string"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_white_color"
+            android:textColorHint="@color/secondary_white_color"
+            android:layout_below="@id/description"
+    />
+</RelativeLayout>

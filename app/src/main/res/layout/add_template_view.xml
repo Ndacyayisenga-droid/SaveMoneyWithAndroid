@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/addNewTemplateView"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/add_template_background"
+>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/add_new_template_string"
+              android:drawableTop="@drawable/add_image"
+              android:gravity="center"
+              android:paddingTop="10dp" android:paddingBottom="10dp"
+              android:textSize="20sp"
+    />
+</LinearLayout>

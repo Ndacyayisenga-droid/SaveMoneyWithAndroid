@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="10dp"
+>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:contentPadding="20dp"
+            app:cardBackgroundColor="@color/profile_color"
+    >
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="30dp" app:srcCompat="@drawable/search_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/searchIcon"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/search_icon_content_description_string"
+            />
+            <TextView
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    tools:text="Hello from header"
+                    android:id="@+id/history_fragment_header_text"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/searchIcon"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:gravity="start|center"
+            />
+            <com.google.android.material.chip.ChipGroup
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/history_fragment_header_text"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"
+                    android:id="@+id/chooseTags"
+                    android:orientation="horizontal"
+                    app:lineSpacing="8dp"
+                    android:layout_marginTop="16dp"
+            />
+            <EditText
+                    android:hint="@string/search_string"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/chooseTags"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:inputType="text"
+                    android:layout_marginTop="16dp" android:backgroundTint="@color/themeColor"
+                    android:textColor="@color/themeColor"
+                    android:id="@+id/searchField"
+                    android:textColorHint="@color/themeGrayedColor"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

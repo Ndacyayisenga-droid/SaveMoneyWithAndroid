@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp" android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:transitionName="cardTransition"
+            android:nestedScrollingEnabled="true"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/headerWrapper"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+        >
+            <ImageView
+                    android:id="@+id/prevButton" android:src="@drawable/prev_nav_icon"
+                    android:contentDescription="@string/month_description_page_prev_button_content_description_string"
+                    android:layout_width="40dp" android:layout_height="40dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+            />
+            <TextView
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/headerText" tools:text="Month overview"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+            />
+            <ImageView
+                    android:id="@+id/nextButton" android:src="@drawable/next_nav_icon"
+                    android:contentDescription="@string/month_description_page_next_button_content_description_string"
+                    android:layout_width="40dp" android:layout_height="40dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+            />
+        </LinearLayout>
+        <com.nevmem.moneysaver.app.views.PieChart
+                android:id="@+id/chart"
+                app:chartBackground="@color/backgroundColor"
+                android:layout_width="170dp" android:layout_height="170dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerWrapper"
+                android:transitionName="chartTransition"
+        />
+        <LinearLayout
+                android:id="@+id/anchor"
+                app:layout_constraintTop_toBottomOf="@id/chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="visible"
+                tools:visibility="visible"
+                android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout
+                    android:orientation="horizontal" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:weightSum="3"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+            >
+                <TextView
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="@string/month_description_page_total_string" android:textSize="22sp"
+                />
+                <TextView
+                        android:layout_weight="2"
+                        android:id="@+id/monthSpend" android:textSize="20sp"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:gravity="end" tools:text="1000.0"
+                        android:textColor="@color/secondary_white_color"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+            >
+                <TextView
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="@string/month_description_page_daily_string" android:textSize="22sp"
+                />
+                <TextView
+                        android:layout_weight="2"
+                        android:id="@+id/monthDailySpend" android:textSize="20sp"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:gravity="end" tools:text="1000.0"
+                        android:textColor="@color/secondary_white_color"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/legend" android:orientation="vertical"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/labelsInfoRecycler"
+                app:layout_constraintTop_toBottomOf="@id/anchor"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/cascade"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

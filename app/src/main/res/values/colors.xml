@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mainFontColor">#c7c7c7</color>
+    <color name="secondaryFontColor">#9AC7C7C7</color>
+    <color name="errorColor">#f55</color>
+    <color name="dangerColor">#FF2424</color>
+    <color name="cardColor">#191919</color>
+    <color name="backgroundColor">#101010</color>
+    <color name="specialColor">#06d6a0</color>
+    <color name="themeColor">#f5b700</color>
+    <color name="themeGrayedColor">#8DF5B700</color>
+    <color name="profile_color">#191919</color>
+    <color name="secondary_white_color">#A0FFFFFF</color>
+    <color name="default_white_color">#fff</color>
+    <color name="manage_tags_loading_state">#A0538CFF</color>
+    <color name="deleteFromHistoryColor">#FFBF00</color>
+</resources>
